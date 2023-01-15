@@ -33,8 +33,8 @@ Consider coefficient of temperature:
     
     H0: intercept = 0
     HA: intercept ≠ 0   
-From the regression table, we obtain both of the P value (P>|t|) of the coefficient of temperature and intercept, and they are all 0. It means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a linear relationship between spectral class and temperature and accept the hypothesis that we stated earlier. 
+From the regression table, we obtain both of the P value (P>|t|) of the coefficient of temperature and intercept, and they are all 0. The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a linear relationship between spectral class and temperature and accept the hypothesis that we stated earlier. 
 #### b) Linear Regression Graph
+<img width="316" alt="image" src="https://user-images.githubusercontent.com/104542629/212529874-750fa670-daf8-4f7a-b184-dff4afa79133.png">
 
-
-
+We can futher state that the higher the spectral class (O is the highest, and M is the lowest) the hotter the star. Therefore, the color rank of stars from hottest to lowest is blue, blue-white, white, yellow-white, yellow, orange, and red. However, it is important to note that we cannot use this linear regression equation to evaluate the temperature from the spectral class because the R-square value (0.668), which represents how fit the data, is not good enough.  
