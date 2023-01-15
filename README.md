@@ -1,9 +1,12 @@
 # ACM Research Coding Challenge (Spring 2023) - Draft
 
-## I. Data Preperation
+## I. Problem description
+Among seven properties (columns), a relationship between any two properties may exist. By understanding such relationships, we may find predict, estimate, or examine one property by evaluating the other without wasting time collecting data. I will examine the relationship between spectral class and temperature. My goal is to find whether the temperature has any effect on classifying stars. 
+
+## II. Data Preperation
 ### 1. Data Cleaning
 Because data is massive, we cannot guarantee that there are no missing data. Therefore, we need to make sure all data has no "defection" by removing any rows that contains blank data.
-### 2. Datatype Consistency
+### 2. Datatype 
 Although all numeric data appears to be float, some of their actual data type may be object. Therefore, we need to convert all data in object type to float type. After checking the output, they are in correct type, as shown in the figure below
 
 <img width="314" alt="image" src="https://user-images.githubusercontent.com/104542629/212501727-025e03dc-0ebe-4efa-8654-22f8a5191d13.png">
