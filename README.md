@@ -1,4 +1,4 @@
-# ACM Research coding challenge (Spring 2023)
+# ACM Research Coding Challenge (Spring 2023)
 
 ## I. Data Preperation
 ### 1. Data Cleaning
@@ -15,5 +15,10 @@ We will get the basic descriptitive statistics of data, such as number of rows, 
 
 ### 1. Common Star Type 
 To find the common star type, I will find the frequency of each type. The common type will have the highest frequency
+
+### 1. Relationship between spectral class and temperature
+#### a) Convert spectral class into numeric
+First, to find the relationship between temperature and color, we need to convert color value into numeric; otherwise, we will not be able to compute anything. According to the article "What are the different types of stars in the universe?," posted on StarLust website, the classes of stars are O, B, A, F, G, K, and M. These classes also corresponds to a color, such as blue, blue-white, white, yellow-white, yellow, orange, and red, respectively [1]. We will use integer (0-6) to replace the classes (color) as the following: O-6, B-5, A-4, F-3, G-2, K-1, and M-0. 
+#### b) Correlation between spetral class and temperature
 
 
