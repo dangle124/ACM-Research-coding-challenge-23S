@@ -1,33 +1,49 @@
 # ACM Research Coding Challenge (Spring 2023) - Draft
 
 ## I. Problem description
-Among seven properties (columns), a relationship between any two properties may exist. By understanding such relationships, we may predict, estimate, or examine one property by evaluating the other without wasting time collecting data. I will examine the relationship between spectral class and temperature. My goal is to find whether the temperature has any effect on classifying stars. 
+Among seven properties (columns), a relationship between any two properties may exist. By understanding such relationships, we may predict, estimate, or examine one property by evaluating the other without wasting time collecting data. I will examine the relationship between spectral class and temperature. My goal is to find whether the temperate of a star has any effect on the appearent color. 
 
-## II. Data Preperation
+## II. Summary
+My hypothesis is that temperature and color of a star has a positive linear relationship. Before analyzing data, I cleanned up the given data to remove any rows that contain missing data and converted colors to numeric values. After preparing data, I used two methods to examine the relationship. In the first method, I used correlation value. The second one, I computed the regression table and used hypothesis test to examine the coefficient of the linear regression. The result from both methods showed that between temperature and color existed a positive linear relationship. 
+
+## III. Data Preperation
 ### 1. Data Cleaning
-Because data is massive, we cannot guarantee that there are no missing data. Therefore, we need to make sure all data has no "defection" by removing any rows that contains blank data.
-### 2. Datatype 
-Although all numeric data appears to be float, some of their actual data type may be object. Therefore, we need to convert all data in object type to float type. After checking the output, they are in correct type, as shown in the figure below
+Because data is massive, we cannot guarantee that there are no missing data. Therefore, we need to make sure all data has no "defection" by removing any rows that contain blank data.
 
-<img width="314" alt="image" src="https://user-images.githubusercontent.com/104542629/212501727-025e03dc-0ebe-4efa-8654-22f8a5191d13.png">
+Another issue had arisen that the color values in the data table were inconsistent; for one color, there were multiple ways to write that color. For example, 'blue white' was written as 'Blue white', 'Blue White', 'Blue-white', etc. Therefore, I had to modify all colors so that they are written in lower case, with no leading and trailing whitespace and no hyphen. Also, 'yellowish' and 'whitish' were written as 'yellow' and 'white'. 
+### 2. Convert color (string) into numeric value
+Because color can be classified into warm and cool colors, I ordered the color data as the following: red, orange red, orange, pale yellow orange, yellow, yellow white, white, blue white, and blue. Next, I assigned numbers from 1 to 9 respective to that order.
 
-## II. Data Analysis 
-We will get the basic descriptitive statistics of data, such as number of rows, average of each column (mean), standard deviation, minimum, maximum, 25, 50, 75 percentitiles, in case we need them later.
+| Color | Numeric Value |
+| --- | --- |
+| red | 1 |
+| orange red | 2 |
+| orange | 3 |
+| pale yellow orange | 4 |
+| yellow | 5 |
+| yellow white | 6 |
+| white | 7 |
+| blue white | 8 |
+| blue | 9 |
 
-<img width="350" alt="image" src="https://user-images.githubusercontent.com/104542629/212502255-e6add5a9-ae98-47c5-a89d-12a945e360a4.png"> <img width="200" alt="image" src="https://user-images.githubusercontent.com/104542629/212502270-6e7e56b9-deda-4e57-a05c-c2f10e5e67e3.png">
+## IV. Data Analysis 
+### 1. Hypothesis
+There is a positive linear relationship between the color and temperature of a star.
 
-### 1. Common Star Type 
-To find the common star type, I will find the frequency of each type. The common type will have the highest frequency
+### 2. Compute regression values
+#### a) Correlation 
+I computed the correlation between temperature and color by using a predefined method in Python, and the result is nearly 0.79. 
 
-### 1. Relationship between spectral class and temperature
-Let's make a hypothesis that there is a linear relationship between spectral class and temperature.
-#### a) Convert spectral class into numeric
-First, to find the relationship between temperature and color, we need to convert color value into numeric; otherwise, we will not be able to compute anything. According to the article "What are the different types of stars in the universe?," posted on StarLust website, the classes of stars are O, B, A, F, G, K, and M. These classes also corresponds to a color, such as blue, blue-white, white, yellow-white, yellow, orange, and red, respectively [1]. We will use integer (0-6) to replace the classes (color) as the following: O-6, B-5, A-4, F-3, G-2, K-1, and M-0. 
+<img width="359" alt="image" src="https://user-images.githubusercontent.com/104542629/212599002-0ff698c9-2bd9-429c-96b3-518ee28000a8.png">
+
+The correlation is greater than 0 and smaller than 1. This means that there exists a relationship between the two and maybe closely linear. However, this may not be sufficient enough to prove my hypothesis because the value is not very close to 1, so I need further examination. 
+
 #### b) Regression table
-The regression table below shows all the statistic values needed to prove the hypothesis mentioned earlier. 
-<img width="463" alt="image" src="https://user-images.githubusercontent.com/104542629/212528039-a602d703-1ace-45dd-b915-75ffb491a9ee.png">
+I set temperature as the independent variable (x) and color as the dependent value (y). The regression table below shows all the statistic values needed to prove the hypothesis mentioned earlier.
 
-We will use hypothesis testing to prove the coefficient of the linear regression, generated by spectral class as independent variable and temperature as dependent variable. If the coefficients of the linear regression equation equals to 0, there is no relationship as being stated in the hypothesis.
+<img width="464" alt="image" src="https://user-images.githubusercontent.com/104542629/212596855-0ea30766-04a7-4621-817d-252c588cc2fa.png">
+
+Based on the values shown in the regression table, the linear regression equation is y = 0.0003x + 1.5512. We will use hypothesis testing to prove the coefficient of linear regression.
 
 Consider coefficient of temperature:
 
@@ -35,9 +51,12 @@ Consider coefficient of temperature:
     HA: coefficient of temperature ≠ 0
     
     H0: intercept = 0
-    HA: intercept ≠ 0   
-From the regression table, we obtain both of the P value (P>|t|) of the coefficient of temperature and intercept, and they are all 0. The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a linear relationship between spectral class and temperature and accept the hypothesis that we stated earlier. 
-#### b) Linear Regression Graph
+    HA: intercept ≠ 0 
+
+From the regression table, we obtain both of the P values (P>|t|) of the coefficient of both temperature and intercept as 0. The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a positive linear relationship between the temperature and color of a star. We can accept the hypothesis that we stated earlier. 
+
+#### 3. Linear Regression Graph
 <img width="316" alt="image" src="https://user-images.githubusercontent.com/104542629/212529874-750fa670-daf8-4f7a-b184-dff4afa79133.png">
 
+### V. Conclusion
 We can futher state that the higher the spectral class (O is the highest, and M is the lowest) the hotter the star. Therefore, the color rank of stars from hottest to lowest is blue, blue-white, white, yellow-white, yellow, orange, and red. However, it is important to note that we cannot use this linear regression equation to evaluate the temperature from the spectral class because the R-square value (0.668), which represents how fit the data, is not good enough.  
