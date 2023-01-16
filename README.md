@@ -34,7 +34,7 @@ There is a positive linear relationship between the color and temperature of a s
 #### a) Correlation 
 I computed the correlation between temperature and color by using a predefined method in Python, and the result is nearly 0.79. 
 
-<img width="359" alt="image" src="https://user-images.githubusercontent.com/104542629/212599002-0ff698c9-2bd9-429c-96b3-518ee28000a8.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/104542629/212599002-0ff698c9-2bd9-429c-96b3-518ee28000a8.png">
 
 The correlation is greater than 0 and smaller than 1. This means that there exists a relationship between the two and maybe closely linear. However, this may not be sufficient enough to prove my hypothesis because the value is not very close to 1, so I need further examination. 
 
@@ -56,7 +56,7 @@ Consider coefficient of temperature:
 From the regression table, we obtain both of the P values (P>|t|) of the coefficient of both temperature and intercept as 0. The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a positive linear relationship between the temperature and color of a star. We can accept the hypothesis that we stated earlier. 
 
 ### 3. Linear Regression Graph
-<img width="297" alt="image" src="https://user-images.githubusercontent.com/104542629/212601253-faf83263-b182-4cd7-8603-2bac583159f5.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/104542629/212601253-faf83263-b182-4cd7-8603-2bac583159f5.png">
 
 ### V. Conclusion
 Based on the the correlation and hypothesis testing that I computed, my hypothesis is proven that the higher the numeric color value, the higher the temperature of a star. In the other word, the cooler the color, the hotter the star. However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value (0.629), which represents how fit the data to the linear regression, is not good enough.  
