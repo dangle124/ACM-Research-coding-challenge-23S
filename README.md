@@ -59,5 +59,5 @@ From the regression table, we obtain both of the P values (P>|t|) of the coeffic
 ### 3. Linear Regression Graph
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/104542629/212601253-faf83263-b182-4cd7-8603-2bac583159f5.png">
 
-### V. Conclusion
+## V. Conclusion
 Based on the the correlation and hypothesis testing that I computed, my hypothesis is proven that the higher the numeric color value, the higher the temperature of a star. In the other word, the cooler the color, the hotter the star. However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value (0.629), which represents how fit the data to the linear regression, is not good enough.  
