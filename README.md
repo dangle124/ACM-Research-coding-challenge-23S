@@ -55,8 +55,8 @@ Consider coefficient of temperature:
 
 From the regression table, we obtain both of the P values (P>|t|) of the coefficient of both temperature and intercept as 0. The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a positive linear relationship between the temperature and color of a star. We can accept the hypothesis that we stated earlier. 
 
-#### 3. Linear Regression Graph
-<img width="316" alt="image" src="https://user-images.githubusercontent.com/104542629/212529874-750fa670-daf8-4f7a-b184-dff4afa79133.png">
+### 3. Linear Regression Graph
+<img width="297" alt="image" src="https://user-images.githubusercontent.com/104542629/212601253-faf83263-b182-4cd7-8603-2bac583159f5.png">
 
 ### V. Conclusion
-We can futher state that the higher the spectral class (O is the highest, and M is the lowest) the hotter the star. Therefore, the color rank of stars from hottest to lowest is blue, blue-white, white, yellow-white, yellow, orange, and red. However, it is important to note that we cannot use this linear regression equation to evaluate the temperature from the spectral class because the R-square value (0.668), which represents how fit the data, is not good enough.  
+Based on the the correlation and hypothesis testing that I computed, my hypothesis is proven that the higher the numeric color value, the higher the temperature of a star. In the other word, the cooler the color, the hotter the star. However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value (0.629), which represents how fit the data to the linear regression, is not good enough.  
