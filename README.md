@@ -7,10 +7,11 @@ Among seven properties (columns), a relationship between any two properties may 
 My hypothesis is that temperature and color of a star has a positive linear relationship. Before analyzing data, I cleanned up the given data to remove any rows that contain missing data and converted colors to numeric values. After preparing data, I used two methods to examine the relationship. In the first method, I used correlation value. The second one, I computed the regression table and used hypothesis test to examine the coefficient of the linear regression. The result from both methods showed that between temperature and color existed a positive linear relationship. 
 
 ## III. Data Preperation
-### 1. Data Cleaning
+### 1. Data cleaning
 Because data is massive, we cannot guarantee that there are no missing data. Therefore, we need to make sure all data has no "defection" by removing any rows that contain blank data.
 
 Another issue had arisen that the color values in the data table were inconsistent; for one color, there were multiple ways to write that color. For example, 'blue white' was written as 'Blue white', 'Blue White', 'Blue-white', etc. Therefore, I had to modify all colors so that they are written in lower case, with no leading and trailing whitespace and no hyphen. Also, 'yellowish' and 'whitish' were written as 'yellow' and 'white'. 
+
 ### 2. Convert color (string) into numeric value
 Because color can be classified into warm and cool colors, I ordered the color data as the following: red, orange red, orange, pale yellow orange, yellow, yellow white, white, blue white, and blue. Next, I assigned numbers from 1 to 9 respective to that order.
 
