@@ -65,10 +65,10 @@ Based on the the correlation and hypothesis testing that I computed, my hypothes
 ## VI. References
 My proposed problem and solution was built based on the lecture of Data Science posted on W3Schools.com.
 
-### 1. Python libraries: https://www.w3schools.com/datascience/ds_python.asp
-### 2. Data Preparation: https://www.w3schools.com/datascience/ds_analyze_data.asp
-### 3. Statistics Correlation: https://www.w3schools.com/datascience/ds_stat_correlation.asp
-### 4. Regression Table: https://www.w3schools.com/datascience/ds_linear_regression_table.asp
-### a) Regression Coefficients:  https://www.w3schools.com/datascience/ds_linear_regression_coeff.asp
-### b) Regression P-value: https://www.w3schools.com/datascience/ds_linear_regression_pvalue.asp
-### c) Regression R-Squared: https://www.w3schools.com/datascience/ds_linear_regression_rsquared.asp
+1. Python libraries: https://www.w3schools.com/datascience/ds_python.asp
+2. Data Preparation: https://www.w3schools.com/datascience/ds_analyze_data.asp
+3. Statistics Correlation: https://www.w3schools.com/datascience/ds_stat_correlation.asp
+4. Regression Table: https://www.w3schools.com/datascience/ds_linear_regression_table.asp
+5. Regression Coefficients:  https://www.w3schools.com/datascience/ds_linear_regression_coeff.asp
+6. Regression P-value: https://www.w3schools.com/datascience/ds_linear_regression_pvalue.asp
+7. Regression R-Squared: https://www.w3schools.com/datascience/ds_linear_regression_rsquared.asp
