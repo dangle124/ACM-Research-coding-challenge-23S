@@ -61,3 +61,14 @@ From the regression table, we obtain both of the P values (P>|t|) of the coeffic
 
 ## V. Conclusion
 Based on the the correlation and hypothesis testing that I computed, my hypothesis is proven that the higher the numeric color value, the higher the temperature of a star. In the other word, the cooler the color, the hotter the star. However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value (0.629), which represents how fit the data to the linear regression, is not good enough.  
+
+## VI. References
+My proposed problem and solution was built based on the lecture of Data Science posted on W3Schools.com.
+
+### 1. Python libraries: https://www.w3schools.com/datascience/ds_python.asp
+### 2. Data Preparation: https://www.w3schools.com/datascience/ds_analyze_data.asp
+### 3. Statistics Correlation: https://www.w3schools.com/datascience/ds_stat_correlation.asp
+### 4. Regression Table: https://www.w3schools.com/datascience/ds_linear_regression_table.asp
+### a) Regression Coefficients:  https://www.w3schools.com/datascience/ds_linear_regression_coeff.asp
+### b) Regression P-value: https://www.w3schools.com/datascience/ds_linear_regression_pvalue.asp
+### c) Regression R-Squared: https://www.w3schools.com/datascience/ds_linear_regression_rsquared.asp
