@@ -1,4 +1,4 @@
-# ACM Research Coding Challenge (Spring 2023) - Draft
+# ACM Research Coding Challenge (Spring 2023)
 
 ## I. Problem Description
 Among seven properties (columns), a relationship between any two properties may exist. By understanding such relationships, we may predict, estimate, or examine one property by evaluating the other without wasting time collecting data. I will examine the relationship between spectral class and temperature. My goal is to find whether the temperate of a star has any effect on the appearent color. 
