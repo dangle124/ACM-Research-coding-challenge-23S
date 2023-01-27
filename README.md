@@ -1,18 +1,20 @@
 # ACM Research Coding Challenge (Spring 2023)
 
 ## I. Problem Description
-Among seven properties (columns), a relationship between any two properties may exist. By understanding such relationships, we may predict, estimate, or examine one property by evaluating the other without wasting time collecting data. I will examine the relationship between spectral class and temperature. My goal is to find whether the temperate of a star has any effect on the appearent color. 
+Among seven properties (columns), a relationship between any two properties may exist. By understanding such relationships, we may predict, estimate, or examine one property by evaluating the other without wasting time collecting data. I will examine the relationship between temperature and star color. My goal is to find whether the temperate of a star has any effect on the apparent color. 
+
+In this report, I used Python to compute statistical data and generate a graph. The Python code was organized and run on Kaggel's note.
 
 ## II. Summary
-My hypothesis is that temperature and color of a star has a positive linear relationship. Before analyzing data, I cleanned up the given data to remove any rows that contain missing data and converted colors to numeric values. After preparing data, I used two methods to examine the relationship. In the first method, I used correlation value. The second one, I computed the regression table and used hypothesis test to examine the coefficient of the linear regression. The result from both methods showed that between temperature and color existed a positive linear relationship. 
+My hypothesis is that the temperature and color of a star have a positive linear relationship. Before analyzing data, I cleaned up the given data to remove any rows that contain missing data and converted the colors to numeric values. After preparing the data, I used two methods to examine the relationship. In the first method, I used correlation value. For the second one, I computed the regression table and used a hypothesis test to examine the coefficient of linear regression. The result from both methods showed that between temperature and color existed a positive linear relationship. 
 
 ## III. Data Preperation
 ### 1. Data cleaning
 Because data is massive, we cannot guarantee that there are no missing data. Therefore, we need to make sure all data has no "defection" by removing any rows that contain blank data.
 
-Another issue had arisen that the color values in the data table were inconsistent; for one color, there were multiple ways to write that color. For example, 'blue white' was written as 'Blue white', 'Blue White', 'Blue-white', etc. Therefore, I had to modify all colors so that they are written in lower case, with no leading and trailing whitespace and no hyphen. Also, 'yellowish' and 'whitish' were written as 'yellow' and 'white'. 
+Another issue had arisen that the color values in the data table were inconsistent. For one color, there were multiple ways to write that color. For example, 'blue white' was written as 'Blue white', 'Blue White', 'Blue-white', etc. Therefore, I had to modify all colors so that they are written in lowercase, with no leading and trailing whitespace and no hyphen. Also, 'yellowish' and 'whitish' were written as 'yellow' and 'white'. 
 
-### 2. Convert color (string) into numeric value
+### 2. Convert colors (string) into numeric values
 Because color can be classified into warm and cool colors, I ordered the color data as the following: red, orange red, orange, pale yellow orange, yellow, yellow white, white, blue white, and blue. Next, I assigned numbers from 1 to 9 respective to that order.
 
 | Color | Numeric Value |
@@ -40,13 +42,13 @@ I computed the correlation between temperature and color by using a predefined m
 The correlation is greater than 0 and smaller than 1. This means that there exists a relationship between the two and maybe closely linear. However, this may not be sufficient enough to prove my hypothesis because the value is not very close to 1, so I need further examination. 
 
 #### b) Regression table
-I set temperature as the independent variable (x) and color as the dependent value (y). The regression table below shows all the statistic values needed to prove the hypothesis mentioned earlier.
+I set temperature as the independent variable (x) and color as the dependent value (y). The regression table below shows all the statistical values needed to prove the hypothesis mentioned earlier.
 
 <img width="464" alt="image" src="https://user-images.githubusercontent.com/104542629/212596855-0ea30766-04a7-4621-817d-252c588cc2fa.png">
 
 Based on the values shown in the regression table, the linear regression equation is y = 0.0003x + 1.5512. We will use hypothesis testing to prove the coefficient of linear regression.
 
-Consider coefficient of temperature:
+Consider the hypothesis below:
 
     H0: coefficient of temperature = 0
     HA: coefficient of temperature ≠ 0
@@ -54,13 +56,15 @@ Consider coefficient of temperature:
     H0: intercept = 0
     HA: intercept ≠ 0 
 
-From the regression table, we obtain both of the P values (P>|t|) of the coefficient of both temperature and intercept as 0. The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a positive linear relationship between the temperature and color of a star. We can accept the hypothesis that we stated earlier. 
+From the regression table, we obtain both of the P values (P>|t|) of the coefficient of both temperature and intercept as 0 (maybe approximately 0). The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a positive linear relationship between the temperature and color of a star. We can accept the hypothesis that we stated earlier. 
 
 ### 3. Linear Regression Graph
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/104542629/212601253-faf83263-b182-4cd7-8603-2bac583159f5.png">
 
+The graph shows temperature as the independent variable and color as the dependent variable. The temperature and color of each star are plotted on the graph. The linear regression is also plotted based on the data points. 
+
 ## V. Conclusion
-Based on the correlation and hypothesis testing that I computed, my hypothesis is proven that the higher the numeric color value (the cooler the color), the higher the temperature of a star. In other words, the blue star is the hottest, and the red star is the coldest. However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value (0.629), which represents how fitted the data to the linear regression, is not good enough. 
+Based on the correlation and hypothesis testing that I computed, I proved my hypothesis that the cooler the color (the higher the numeric color value), the higher the temperature of a star. In other words, the blue star is the hottest, and the red star is the coldest. However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value (0.629), which represents how fitted the data to the linear regression, is not good enough. 
 
 ## VI. References
 My proposed problem and solution was built based on the lecture of Data Science posted on W3Schools.com.
