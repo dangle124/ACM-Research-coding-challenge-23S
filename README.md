@@ -58,16 +58,18 @@ Consider the hypothesis below:
 
 From the regression table, we obtain both of the P values (P>|t|) of the coefficient of both temperature and intercept as 0 (maybe approximately 0). The typical threshold for P is 0.05. Therefore, it means that almost no chance that we falsely reject the H0. In the other words, we can state that there exists a positive linear relationship between the temperature and color of a star. We can accept the hypothesis that we stated earlier. 
 
+However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value is 0.629, which represents how fitted the data to the linear regression, is not good enough.
+
 ### 3. Linear Regression Graph
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/104542629/212601253-faf83263-b182-4cd7-8603-2bac583159f5.png">
 
 The graph shows temperature as the independent variable and color as the dependent variable. The temperature and color of each star are plotted on the graph. The linear regression is also plotted based on the data points. 
 
 ## V. Conclusion
-Based on the correlation and hypothesis testing that I computed, I proved my hypothesis that the cooler the color (the higher the numeric color value), the higher the temperature of a star. In other words, the blue star is the hottest, and the red star is the coldest. However, it is important to note that we cannot use this linear regression equation to estimate the color of a star from its temperature because the R-square value (0.629), which represents how fitted the data to the linear regression, is not good enough. 
+Based on the correlation and hypothesis testing that I computed, I proved my hypothesis that the cooler the color (the higher the numeric color value), the higher the temperature of a star. In other words, the blue star is the hottest, and the red star is the coldest. Although the positive linear relationship was proven, its linear equation should not be used to estimate the color because the R-square value shows it is not sufficient.
 
 ## VI. References
-My proposed problem and solution was built based on the lecture of Data Science posted on W3Schools.com.
+My proposed problem and solution was built on the lecture of Data Science posted on W3Schools.com.
 
 1. Python libraries: https://www.w3schools.com/datascience/ds_python.asp
 2. Data Preparation: https://www.w3schools.com/datascience/ds_analyze_data.asp
