@@ -66,7 +66,7 @@ However, it is important to note that we cannot use this linear regression equat
 The graph shows temperature as the independent variable and color as the dependent variable. The temperature and color of each star are plotted on the graph. The linear regression is also plotted based on the data points. 
 
 ## V. Conclusion
-Based on the correlation and hypothesis testing that I computed, I proved my hypothesis that the cooler the color (the higher the numeric color value), the higher the temperature of a star. In other words, the blue star is the hottest, and the red star is the coldest. Although the positive linear relationship was proven, its linear equation should not be used to estimate the color because the R-square value shows it is not sufficient.
+Based on the correlation and hypothesis testing that I computed, I proved my hypothesis that the higher the temperature of a star, the cooler the color (the higher the numeric color value). In other words, the blue star is the hottest, and the red star is the coldest among the other colors. Although the positive linear relationship was proven, its linear equation cannot be used to estimate the color because the R-square value shows it is not sufficient.
 
 ## VI. References
 My proposed problem and solution was built on the lecture of Data Science posted on W3Schools.com.
