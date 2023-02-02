@@ -1,5 +1,5 @@
 # ACM Research Coding Challenge (Spring 2023)
-Name: Dang Le
+Name: Dang Le \n
 NetID: dkl200000
 
 ## I. Problem Description
