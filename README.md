@@ -1,6 +1,5 @@
 # ACM Research Coding Challenge (Spring 2023)
-Name: Dang Le \n
-NetID: dkl200000
+Name: Dang Le - NetID: dkl200000
 
 ## I. Problem Description
 Among seven properties (columns), a relationship between any two properties may exist. By understanding such relationships, we may predict, estimate, or examine one property by evaluating the other without wasting time collecting data. I will examine the relationship between temperature and star color. My goal is to find whether the temperate of a star has any effect on the apparent color. 
